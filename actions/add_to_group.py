@@ -58,14 +58,14 @@ for i in range(1, accounts+1):
             pg.press("enter")
             #Click view Group
             t.sleep(2)
-            pg.moveTo(466,432,duration=0.5)
+            pg.moveTo(466,452,duration=0.5)
             pg.leftClick()
 
-            for column in excel_data['username'].tolist():
-                if count >= end_count:
-                    end_count = count + end_count
-                    current_window.terminate()
-                    break
+            for column in excel_data['Usernames'].tolist():
+                #if count >= end_count:
+                   # end_count = count + end_count
+                   # current_window.terminate()
+                   # break
 
                 # Move to TITLE
                 t.sleep(2)
@@ -82,7 +82,7 @@ for i in range(1, accounts+1):
                 pg.leftClick()
                 t.sleep(3)
                 #Write username in search box
-                pg.write(str(excel_data['username'][count]))
+                pg.write(str(excel_data['Usernames'][count]))
                 t.sleep(2)
 
                 #move to first username
@@ -94,11 +94,15 @@ for i in range(1, accounts+1):
                 pg.moveTo(469,486,duration=0.5)
                 pg.leftClick()
 
-                #End and start of loop
-                pg.moveTo(363,45,duration=0.5)
-                pg.leftClick()
                 t.sleep(2)
 
+                pg.leftClick()
+
+                pg.moveTo(484,102,duration=0.5)
+                pg.leftClick()
+                t.sleep(3)
+
+               
                 count = count+1
                 print(count)
             

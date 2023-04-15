@@ -11,7 +11,7 @@ class Config:
     source_group_id = 1588361928
     
     # add_to_group (Link)
-    main_group = "https://t.me/nohathackergroup"
-    count = 0
-    end_count = 3
+    main_group = "https://t.me/cryptoplanetit"
+    count = 270
+    end_count = 400
     accounts = 3
